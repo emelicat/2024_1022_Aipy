@@ -38,5 +38,8 @@ def get_status(BMI:int)->str:#有傳出值的function
 nums = int(input('請輸入學生數量:'))
 student_names:list[str] = get_names(nums=nums)
 students = generate_students(names=student_names)
-print(students, sep='\n')
+for name in students:
+    for key,value in name.items():
+        print(f'{key}:{value}')
+    print('=========================')
 
